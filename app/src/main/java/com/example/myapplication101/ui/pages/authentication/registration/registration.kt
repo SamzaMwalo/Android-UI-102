@@ -113,7 +113,7 @@ fun SignUpScreen() {
                 )
             },
             placeholder = {
-                Text(text = "example@mail.com")
+                Text(text = "name@example.com")
             },
             maxLines = 1,
             label = {
@@ -251,9 +251,9 @@ fun SignUpScreen() {
             TextButton(
                 onClick = {}
             ) {
-                Text(text="no account?",
+                Text(text="Log in.",
                     style = TextStyle(
-                        fontSize = 11.sp,
+                        fontSize = 16.sp,
                     ))
             }
         }

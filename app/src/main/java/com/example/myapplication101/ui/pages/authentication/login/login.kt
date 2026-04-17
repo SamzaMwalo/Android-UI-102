@@ -96,7 +96,7 @@ fun LoginScreen() {
                 )
             },
             placeholder = {
-                Text(text="example@mail.com")
+                Text(text="name@example.com")
             },
             maxLines = 1,
             label = {

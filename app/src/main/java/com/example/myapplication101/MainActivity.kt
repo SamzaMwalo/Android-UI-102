@@ -25,9 +25,9 @@ class MainActivity : ComponentActivity() {
         setContent {
             MyApplication101Theme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-//                    LoginScreen()
+                    LoginScreen()
 //                    ForgotPasswordScreen()
-                    SignUpScreen()
+//                    SignUpScreen()
                 }
             }
         }
