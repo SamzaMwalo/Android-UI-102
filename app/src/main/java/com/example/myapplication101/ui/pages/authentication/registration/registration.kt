@@ -145,6 +145,10 @@ fun SignUpScreen() {
             },
             maxLines = 1,
             shape = RoundedCornerShape(20.dp),
+            colors = OutlinedTextFieldDefaults.colors(
+                focusedBorderColor = secondaryColor,
+                unfocusedBorderColor = primaryColor
+            ),
             visualTransformation = if (isVisible) {
                 VisualTransformation.None
             } else {
@@ -187,6 +191,10 @@ fun SignUpScreen() {
             },
             maxLines = 1,
             shape = RoundedCornerShape(20.dp),
+            colors = OutlinedTextFieldDefaults.colors(
+                focusedBorderColor = secondaryColor,
+                unfocusedBorderColor = primaryColor
+            ),
             visualTransformation = if (isVisible) {
                 VisualTransformation.None
             } else {

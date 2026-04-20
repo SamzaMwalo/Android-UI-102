@@ -164,7 +164,7 @@ fun LoginScreen() {
             )
         ) {
             Text(text = "Log in",
-                 modifier = Modifier.padding(horizontal = 120.dp))
+                 modifier = Modifier.padding(horizontal = 125.dp))
         }
         Spacer(modifier= Modifier.height(5.dp))
 
@@ -183,7 +183,7 @@ fun LoginScreen() {
             onClick = {}
         ) {
             Text(text = "Create new account",
-                modifier = Modifier.padding(horizontal = 72.dp))
+                modifier = Modifier.padding(horizontal = 78.dp))
         }
     }
 }
