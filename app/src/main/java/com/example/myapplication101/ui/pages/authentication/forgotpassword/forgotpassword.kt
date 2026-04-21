@@ -35,9 +35,11 @@ import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavHostController
 import com.example.myapplication101.R
 import com.example.myapplication101.ui.components.LottieAnimationWidget
 import com.example.myapplication101.ui.components.pagePadding
+import com.example.myapplication101.ui.navigation.ROUTES
 import com.example.myapplication101.ui.theme.primaryColor
 import com.example.myapplication101.ui.theme.secondaryColor
 
@@ -47,7 +49,7 @@ import com.example.myapplication101.ui.theme.secondaryColor
 * */
 
 @Composable
-fun ForgotPasswordScreen(){
+fun ForgotPasswordScreen(navController: NavHostController, modifier: Modifier){
     var emailInput by remember { mutableStateOf(TextFieldValue("")) }
     Column(
         verticalArrangement = Arrangement.Center,
@@ -116,7 +118,7 @@ fun ForgotPasswordScreen(){
 
         // minor buttons
         TextButton(
-                onClick = {}
+                onClick = { navController.navigate(ROUTES.Login.name) }
             ) {
                 Text(
                     text="Back to login",

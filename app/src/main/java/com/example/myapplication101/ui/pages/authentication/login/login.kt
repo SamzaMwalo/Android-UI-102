@@ -43,6 +43,7 @@ import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavHostController
 import com.airbnb.lottie.compose.LottieAnimation
 import com.airbnb.lottie.compose.LottieCompositionSpec
 import com.airbnb.lottie.compose.LottieCompositionSpec.RawRes
@@ -52,13 +53,14 @@ import com.airbnb.lottie.compose.rememberLottieComposition
 import com.example.myapplication101.R
 import com.example.myapplication101.ui.components.LottieAnimationWidget
 import com.example.myapplication101.ui.components.pagePadding
+import com.example.myapplication101.ui.navigation.ROUTES
 import com.example.myapplication101.ui.theme.primaryColor
 import com.example.myapplication101.ui.theme.secondaryColor
 import kotlin.math.round
 
 
 @Composable
-fun LoginScreen() {
+fun LoginScreen(navController: NavHostController, modifier: Modifier) {
     // text input
     var emailInput by remember{ mutableStateOf(TextFieldValue("")) }
     var passwordInput by remember { mutableStateOf(TextFieldValue())}
@@ -170,7 +172,7 @@ fun LoginScreen() {
 
         // row
         TextButton(
-        onClick = {}
+        onClick = { navController.navigate(ROUTES.ForgotPassword.name) }
         ) {
             Text(text="Forgot Password?",
                 style = TextStyle(
@@ -180,7 +182,7 @@ fun LoginScreen() {
         Spacer(modifier= Modifier.height(25.dp))
 
         OutlinedButton(
-            onClick = {}
+            onClick = { navController.navigate(ROUTES.SignUp.name) }
         ) {
             Text(text = "Create new account",
                 modifier = Modifier.padding(horizontal = 78.dp))

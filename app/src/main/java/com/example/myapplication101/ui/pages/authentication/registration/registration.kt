@@ -41,13 +41,15 @@ import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavHostController
 import com.example.myapplication101.R
 import com.example.myapplication101.ui.components.pagePadding
+import com.example.myapplication101.ui.navigation.ROUTES
 import com.example.myapplication101.ui.theme.primaryColor
 import com.example.myapplication101.ui.theme.secondaryColor
 
 @Composable
-fun SignUpScreen() {
+fun SignUpScreen(navController: NavHostController, modifier: Modifier) {
     var name by remember { mutableStateOf(TextFieldValue("")) }
     var emailInput by remember { mutableStateOf(TextFieldValue("")) }
     var passwordInput by remember { mutableStateOf(TextFieldValue()) }
@@ -257,7 +259,7 @@ fun SignUpScreen() {
             )
 
             TextButton(
-                onClick = {}
+                onClick = { navController.navigate(ROUTES.Login.name) }
             ) {
                 Text(text="Log in.",
                     style = TextStyle(
